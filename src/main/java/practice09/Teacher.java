@@ -39,7 +39,7 @@ public class Teacher extends Person {
                 ? super.introduce() + " I am a Teacher. I teach Class " + classNums.substring(0, classNums.length()-2) + "."
                 : super.introduce() + " I am a Teacher. I teach No Class.";
     }
-    
+
     public String introduceWith(Student student) {
         boolean isInClass = false;
         for (Klass klass: classes) {
