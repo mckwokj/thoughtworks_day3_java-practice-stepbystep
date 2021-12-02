@@ -64,7 +64,6 @@ public class Klass {
     }
 
     public boolean isIn(Student student) {
-        System.out.println(student.getKlass().getNumber() == number);
         return student.getKlass().getNumber() == number;
     }
 }
