@@ -1,7 +1,6 @@
 package practice10;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Klass {
@@ -26,11 +25,10 @@ public class Klass {
     public void assignLeader(Student student) {
         String output = "It is not one of us.";
         for (Student member: members) {
-            System.out.println();
             if (member.equals(student)) {
                 leader = student;
                 output = "";
-                System.out.print("I am "+ teacherName+ ". I know " + student.getName() +" become Leader of " + getDisplayName() + ".\n");
+                System.out.print(Teacher.createAssignMsg(student.getName(), teacherName, "leader", getDisplayName()));
                 break;
             }
         }
@@ -42,7 +40,11 @@ public class Klass {
 
     public void appendMember(Student student) {
         members.add(student);
-        System.out.print("I am "+ teacherName+ ". I know " + student.getName() +" has joined " + getDisplayName() + ".\n");
+        System.out.print(Teacher.createAssignMsg(student.getName(), teacherName, "member", getDisplayName()));
+    }
+
+    private String teacherAssignMsg (Student student) {
+        return "I am "+ teacherName+ ". I know " + student.getName();
     }
 
     public int getNumber() {

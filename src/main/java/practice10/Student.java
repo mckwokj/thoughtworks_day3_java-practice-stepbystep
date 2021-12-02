@@ -14,10 +14,10 @@ public class Student extends Person {
 
     @Override
     public String introduce() {
+        String studentMsg = super.introduce() + " I am a Student.";
         if (klass.getLeader() != null && klass.getLeader().getName().equals(getName())) {
-            return super.introduce() + " I am a Student. I am Leader of Class " + klass.getNumber() + ".";
+            return studentMsg + " I am Leader of Class " + klass.getNumber() + ".";
         }
-
-        return super.introduce() + " I am a Student. I am at Class " + klass.getNumber() + ".";
+        return studentMsg + " I am at Class " + klass.getNumber() + ".";
     }
 }
