@@ -60,9 +60,4 @@ public class Teacher extends Person {
     public LinkedList<Klass> getClasses() {
         return classes;
     }
-
-    public static void main(String[] args) {
-        Teacher tom = new Teacher(1, "Tom", 21);
-        System.out.print(tom.introduce());
-    }
 }
